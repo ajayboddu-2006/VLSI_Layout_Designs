@@ -1,1 +1,22 @@
-
+* SPICE3 file created from INV.ext - technology: sky130A
+.option scale=0.01u
+.include pshort.lib
+.include nshort.lib
+//.subckt INV VDD GND IN OUT
+M1000 OUT IN VDD VDD pmos_model.0 ad=2100 pd=184 as=1850 ps=174 w=50 l=15
+M1001 OUT IN GND GND nmos_model.0 ad=2140 pd=186 as=1990 ps=180 w=51 l=15
+VDD VDD 0 3.3V
+VSS VSS 0 0V
+Va IN VSS PULSE(0 3.3V 0 0.1ns  0.1ns 2ns 4ns)
+C0 IN VDD 0.0206f
+C1 OUT VDD 0.11f
+C2 OUT IN 0.0187f
+C3 OUT GND 0.251f
+C4 IN GND 0.209f
+C5 VDD GND 0.728f
+//.ends
+.tran 1n 10n
+.control
+run
+.endc
+.end
