@@ -1,0 +1,72 @@
+* SPICE3 file created from MUX_2X1.ext - technology: sky130A
+
+.include pshort.lib
+.include nshort.lib
+
+//.option scale=10m
+
+.subckt MUX_2X1 VDD GND I0 I1 S OUT
+M1000 a_113_n141# I1 GND GND sky130_fd_pr__nfet_01v8 ad=770 pd=79u as=1500 ps=156 w=44 l=15
+M1001 a_n3_n141# S VDD VDD sky130_fd_pr__pfet_01v8 ad=1540 pd=158 as=1540 ps=158 w=44 l=15
+M1002 a_213_n141# a_n3_n141# a_163_n141# GND sky130_fd_pr__nfet_01v8 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1003 a_163_n141# a_n3_n141# a_63_9# VDD sky130_fd_pr__pfet_01v8 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1004 a_63_9# S VDD VDD sky130_fd_pr__pfet_01v8 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1005 GND I0 a_213_n141# GND sky130_fd_pr__nfet_01v8 ad=1410 pd=152 as=770 ps=79u w=44 l=15
+M1006 VDD I1 a_63_9# VDD sky130_fd_pr__pfet_01v8 ad=770 pd=79u as=1540 ps=158 w=44 l=15
+M1007 a_63_9# I0 a_163_n141# VDD sky130_fd_pr__pfet_01v8 ad=1670 pd=164 as=770 ps=79u w=44 l=15
+M1008 a_163_n141# S a_113_n141# GND sky130_fd_pr__nfet_01v8 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1009 a_n3_n141# S GND GND sky130_fd_pr__nfet_01v8 ad=1470 pd=154 as=1470 ps=154 w=42 l=15
+M1010 OUT a_163_n141# GND GND sky130_fd_pr__nfet_01v8 ad=1500 pd=156 as=1500 ps=156 w=44 l=15
+M1011 OUT a_163_n141# VDD VDD sky130_fd_pr__pfet_01v8 ad=1580 pd=160 as=1530 ps=158 w=45 l=15
+
+VDD VDD 0 5V
+VSS VSS 0 0V
+Va I0 VSS PULSE(0 5V 0 0.1ns 0.1ns 10ns 20ns)
+Vb I1 VSS PULSE(0 5V 0 0.1ns 0.1ns 5ns 10ns)
+Vc S VSS PULSE(0 5V 0 0.1ns 0.1ns 20ns 40ns)
+
+C0 a_n3_n141# a_63_9# 0.163f
+C1 a_113_n141# a_63_9# 0.00137f
+C2 a_63_9# VDD 0.55f
+C3 a_163_n141# a_n3_n141# 0.174f
+C4 a_163_n141# a_113_n141# 0.00374f
+C5 a_163_n141# VDD 0.0671f
+C6 a_163_n141# a_63_9# 0.228f
+C7 I1 S 0.125f
+C8 a_n3_n141# I0 0.0927f
+C9 a_213_n141# a_63_9# 0.00137f
+C10 a_n3_n141# OUT 1.16e-19
+C11 VDD I0 0.00777f
+C12 a_n3_n141# I1 0.022f
+C13 VDD OUT 0.128f
+C14 a_163_n141# a_213_n141# 0.00738f
+C15 a_63_9# I0 0.0126f
+C16 VDD I1 0.0131f
+C17 a_63_9# OUT 0.00219f
+C18 a_63_9# I1 0.0124f
+C19 a_163_n141# I0 0.0721f
+C20 a_163_n141# OUT 0.0574f
+C21 a_163_n141# I1 0.00369f
+C22 a_n3_n141# S 0.149f
+C23 VDD S 0.0297f
+C24 a_63_9# S 0.0137f
+C25 OUT I0 9.04e-19
+C26 a_163_n141# S 0.0101f
+C27 a_113_n141# a_n3_n141# 0.00292f
+C28 a_n3_n141# VDD 0.188f
+C29 OUT GND 0.304f
+C30 I0 GND 0.171f
+C31 S GND 0.375f
+C32 I1 GND 0.175f
+C33 VDD GND 1.97f
+C34 a_213_n141# GND 0.00921f **FLOATING
+C35 a_113_n141# GND 0.00921f **FLOATING
+C36 a_63_9# GND 0.15f **FLOATING
+C37 a_163_n141# GND 0.634f **FLOATING
+C38 a_n3_n141# GND 0.553f **FLOATING
+//.ends
+.tran 1n 40n
+.control
+run
+.endc
+.end
