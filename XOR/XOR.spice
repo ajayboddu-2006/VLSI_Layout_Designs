@@ -1,0 +1,76 @@
+* SPICE3 file created from XOR.ext - technology: sky130A
+
+.include pshort.lib
+.include nshort.lib
+
+.option scale=0.01u
+
+//.subckt XOR VDD GND A B OUT
+
+M1000 a_n117_n141# A VDD VDD pshort_model.0 ad=1670 pd=164 as=1620 ps=162 w=45 l=15
+M1001 a_n3_n147# B VDD VDD pshort_model.0 ad=1540 pd=158 as=1540 ps=158 w=44 l=15
+M1002 GND A a_213_n146# GND nshort_model.0 ad=1410 pd=152 as=770 ps=79u w=44 l=15
+M1003 a_163_n146# a_n3_n147# a_63_9# VDD pshort_model.0 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1004 a_63_9# B VDD VDD pshort_model.0 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1005 a_163_n146# B a_113_n146# GND nshort_model.0 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1006 VDD a_n117_n141# a_63_9# VDD pshort_model.0 ad=770 pd=79u as=1540 ps=158 w=44 l=15
+M1007 a_63_9# A a_163_n146# VDD pshort_model.0 ad=1670 pd=164 as=770 ps=79u w=44 l=15
+M1008 a_n117_n141# A GND GND nshort_model.0 ad=1510 pd=156 as=1510 ps=156 w=42 l=15
+M1009 a_113_n146# a_n117_n141# GND GND nshort_model.0 ad=770 pd=79u as=1500 ps=156 w=44 l=15
+M1010 a_n3_n147# B GND GND nshort_model.0 ad=1580 pd=160 as=1580 ps=160 w=45 l=15
+M1011 OUT a_163_n146# GND GND nshort_model.0 ad=1500 pd=156 as=1500 ps=156 w=44 l=15
+M1012 a_213_n146# a_n3_n147# a_163_n146# GND nshort_model.0 ad=770 pd=79u as=770 ps=79u w=44 l=15
+M1013 OUT a_163_n146# VDD VDD pshort_model.0 ad=1580 pd=160 as=1530 ps=158 w=45 l=15
+
+VDD VDD 0 5V
+VSS VSS 0 0V
+Va A VSS PULSE(0 5V 0 0.1ns 0.1ns 5ns 10ns)
+Vb B VSS PULSE(0 5V 0 0.1ns 0.1ns 8ns 16ns)
+
+C0 B a_n3_n147# 0.152f
+C1 VDD a_n3_n147# 0.188f
+C2 OUT a_n3_n147# 1.16e-19
+C3 a_113_n146# a_163_n146# 0.00374f
+C4 B a_n117_n141# 0.158f
+C5 VDD a_n117_n141# 0.238f
+C6 B a_163_n146# 0.0107f
+C7 a_63_9# a_n3_n147# 0.163f
+C8 VDD a_163_n146# 0.0671f
+C9 OUT a_163_n146# 0.0574f
+C10 a_63_9# a_n117_n141# 0.0253f
+C11 A a_n3_n147# 0.096f
+C12 a_63_9# a_163_n146# 0.228f
+C13 A a_n117_n141# 0.025f
+C14 A a_163_n146# 0.0713f
+C15 a_213_n146# a_163_n146# 0.00731f
+C16 a_n3_n147# a_n117_n141# 0.229f
+C17 a_n3_n147# a_163_n146# 0.171f
+C18 B VDD 0.0293f
+C19 OUT VDD 0.128f
+C20 a_n117_n141# a_163_n146# 0.0157f
+C21 a_63_9# a_113_n146# 0.00134f
+C22 B a_63_9# 0.0137f
+C23 a_63_9# VDD 0.55f
+C24 OUT a_63_9# 0.00219f
+C25 B A 0.0325f
+C26 A VDD 0.025f
+C27 OUT A 9.7e-19
+C28 A a_63_9# 0.0131f
+C29 a_63_9# a_213_n146# 0.00134f
+C30 a_n3_n147# a_113_n146# 0.00282f
+C31 OUT GND 0.286f
+C32 B GND 0.345f
+C33 A GND 0.403f
+C34 VDD GND 2.28f
+C35 a_213_n146# GND 0.00892f **FLOATING
+C36 a_113_n146# GND 0.00892f **FLOATING
+C37 a_63_9# GND 0.137f **FLOATING
+C38 a_163_n146# GND 0.6f **FLOATING
+C39 a_n3_n147# GND 0.481f **FLOATING
+C40 a_n117_n141# GND 0.746f **FLOATING
+//.ends
+.tran 1n 20n
+.control
+run
+.endc
+.end
