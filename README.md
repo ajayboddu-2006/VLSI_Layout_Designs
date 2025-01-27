@@ -16,7 +16,7 @@ As part of this project, the repository includes:
 ## Repository Structure
 
 ```plaintext
-├── Digital
+├── Digital Layouts
 │   ├── Inverter
 │   ├── AND
 │   ├── NAND
@@ -26,10 +26,11 @@ As part of this project, the repository includes:
 |   ├── 4X1 MUX
 |   ├── 3:8 Decoder
 |   ├── <To be Added>
-├── Analog
+├── Analog Layouts
 │   ├── <To be added>
-├── Mixed_Signal
+├── Mixed_Signal Layouts
 │   ├── <To be added>
+├── Libs
 ```
 
 All layouts are created using **Magic VLSI** and designed with the **Sky130 Process Design Kit (PDK)**. Circuit verification is performed using **NGSPICE**, ensuring both accuracy and compliance with industry-standard design rules. The use of the Sky130 PDK enables compatibility with real-world fabrication processes, making the layouts more practical and scalable.
