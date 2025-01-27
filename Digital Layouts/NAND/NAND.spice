@@ -1,0 +1,36 @@
+* SPICE3 file created from NAND.ext - technology: sky130A
+.include pshort.lib
+.include nshort.lib
+
+.option scale=0.01u
+
+//.subckt NAND GND IN1 IN2
+M1000 a_n12_166# IN1 w_n86_148# w_n86_148# pmos_model.0 ad=810 pd=81u as=1580 ps=160 w=45 l=15
+M1001 w_n86_148# IN2 a_n12_166# w_n86_148# pmos_model.0 ad=1490 pd=156 as=810 ps=81u w=45 l=15
+M1002 a_n12_166# IN2 a_n12_34# GND nmos_model.0 ad=1870 pd=174 as=864 ps=84u w=48 l=15
+M1003 a_n12_34# IN1 GND GND nmos_model.0 ad=864 pd=84u as=1780 ps=170 w=48 l=15
+
+VDD VDD 0 5V
+VSS VSS 0 0V
+Va IN1 VSS PULSE(0 5V 0 0.1ns 0.1ns 2ns 4ns)
+Vb IN2 VSS PULSE(0 5V 0 0.1ns 0.1ns 5ns 10ns)
+
+C0 IN1 a_n12_166# 0.0372f
+C1 w_n86_148# IN2 0.0395f
+C2 w_n86_148# a_n12_166# 0.227f
+C3 a_n12_166# IN2 0.0673f
+C4 w_n86_148# a_n12_34# 9.65e-19
+C5 a_n12_34# a_n12_166# 0.00776f
+C6 IN1 w_n86_148# 0.0386f
+C7 IN1 IN2 0.0946f
+C8 IN2 GND 0.373f
+C9 IN1 GND 0.362f
+C10 a_n12_34# GND 0.00945f **FLOATING
+C11 a_n12_166# GND 0.173f **FLOATING
+C12 w_n86_148# GND 0.792f **FLOATING
+//.ends
+.tran 1n 50n
+.control
+run
+.endc
+.end
