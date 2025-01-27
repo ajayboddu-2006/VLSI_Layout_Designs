@@ -30,13 +30,10 @@ As part of this project, the repository includes:
 │   ├── <To be added>
 ├── Mixed_Signal
 │   ├── <To be added>
-
+```
 
 All layouts are created using **Magic VLSI** and designed with the **Sky130 Process Design Kit (PDK)**. Circuit verification is performed using **NGSPICE**, ensuring both accuracy and compliance with industry-standard design rules. The use of the Sky130 PDK enables compatibility with real-world fabrication processes, making the layouts more practical and scalable.
 
 Contributions to this repository are highly encouraged to further expand and improve the collection of designs.
----  
 
-Let me know if you'd like any additional details!
----
 
