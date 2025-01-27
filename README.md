@@ -31,6 +31,9 @@ As part of this project, the repository includes:
 ├── Mixed_Signal Layouts
 │   ├── <To be added>
 ├── Libs
+│   ├── nshort.lib
+│   ├── pshort.lib
+│   ├── sky130A.tech
 ```
 
 All layouts are created using **Magic VLSI** and designed with the **Sky130 Process Design Kit (PDK)**. Circuit verification is performed using **NGSPICE**, ensuring both accuracy and compliance with industry-standard design rules. The use of the Sky130 PDK enables compatibility with real-world fabrication processes, making the layouts more practical and scalable.
