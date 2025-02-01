@@ -22,6 +22,7 @@ As part of this project, the repository includes:
 │   ├── NAND
 │   ├── XOR
 │   ├── Half Adder
+|   ├── Full Adder
 |   ├── 2X1 MUX
 |   ├── 4X1 MUX
 |   ├── 3:8 Decoder
