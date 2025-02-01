@@ -1,0 +1,231 @@
+* SPICE3 file created from Ring_Oscillator.eM100t - technology: sky130A
+
+.include pshort.lib
+
+.include nshort.lib
+
+.option scale=0.01u
+
+
+
+//.subckt Ring_Oscillator VDD GND OUT
+
+M1000 a_1936_n135# a_1808_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1001 a_530_n135# a_402_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1002 OUT a_1936_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1003 a_1171_n135# a_1040_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1004 a_1936_n135# a_1808_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1005 a_1426_n135# a_1298_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1006 a_1553_n135# a_1426_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1007 a_1040_n135# a_912_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1008 a_1553_n135# a_1426_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1009 a_785_n135# a_657_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1010 a_912_n135# a_785_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1011 a_275_n135# a_147_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1012 a_657_n135# a_530_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1013 a_912_n135# a_785_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1014 a_275_n135# a_147_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1015 a_402_n135# a_275_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1016 a_1298_n135# a_1171_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1017 a_1040_n135# a_912_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1018 a_20_n135# OUT GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1019 a_1426_n135# a_1298_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1020 a_1681_n135# a_1553_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1021 a_657_n135# a_530_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1022 a_530_n135# a_402_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1023 a_147_n135# a_20_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1024 a_1808_n135# a_1681_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1025 a_785_n135# a_657_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1026 a_1681_n135# a_1553_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1027 a_1298_n135# a_1171_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1028 a_147_n135# a_20_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1029 a_402_n135# a_275_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+M1030 a_20_n135# OUT VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1031 a_1171_n135# a_1040_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2090 ps=184 w=51 l=19
+
+M1032 OUT a_1936_n135# VDD VDD pshort_model.0 ad=2090 pd=184 as=2040 ps=182 w=51 l=19
+
+M1033 a_1808_n135# a_1681_n135# GND GND nshort_model.0 ad=2080 pd=184 as=2080 ps=184 w=52 l=19
+
+
+
+VDD VDD 0 10V
+
+VSS VSS 0 0V
+
+
+
+C0 VDD a_1040_n135# 0.233f
+
+C1 a_1171_n135# a_1040_n135# 0.107f
+
+C2 a_402_n135# a_530_n135# 0.107f
+
+C3 a_530_n135# OUT 0.0663f
+
+C4 VDD a_1553_n135# 0.239f
+
+C5 a_1681_n135# OUT 0.0663f
+
+C6 a_1808_n135# a_1936_n135# 0.107f
+
+C7 a_1171_n135# VDD 0.238f
+
+C8 OUT a_1936_n135# 0.136f
+
+C9 a_785_n135# a_912_n135# 0.107f
+
+C10 OUT a_1040_n135# 0.0673f
+
+C11 a_785_n135# a_657_n135# 0.107f
+
+C12 a_1808_n135# VDD 0.239f
+
+C13 a_1553_n135# OUT 0.0665f
+
+C14 a_275_n135# VDD 0.238f
+
+C15 a_530_n135# a_657_n135# 0.107f
+
+C16 a_20_n135# VDD 0.238f
+
+C17 a_402_n135# VDD 0.239f
+
+C18 VDD OUT 0.968f
+
+C19 a_1171_n135# OUT 0.0663f
+
+C20 a_912_n135# a_1040_n135# 0.106f
+
+C21 a_1298_n135# VDD 0.239f
+
+C22 a_1298_n135# a_1171_n135# 0.107f
+
+C23 a_1808_n135# OUT 0.0668f
+
+C24 a_147_n135# VDD 0.239f
+
+C25 a_402_n135# a_275_n135# 0.107f
+
+C26 a_275_n135# OUT 0.0663f
+
+C27 a_20_n135# OUT 0.157f
+
+C28 a_1553_n135# a_1426_n135# 0.107f
+
+C29 a_402_n135# OUT 0.0665f
+
+C30 VDD a_912_n135# 0.239f
+
+C31 VDD a_657_n135# 0.239f
+
+C32 VDD a_1426_n135# 0.238f
+
+C33 a_275_n135# a_147_n135# 0.107f
+
+C34 a_147_n135# a_20_n135# 0.107f
+
+C35 a_1298_n135# OUT 0.0665f
+
+C36 a_147_n135# OUT 0.0666f
+
+C37 a_785_n135# VDD 0.238f
+
+C38 a_1553_n135# a_1681_n135# 0.107f
+
+C39 OUT a_912_n135# 0.0665f
+
+C40 VDD a_530_n135# 0.238f
+
+C41 a_657_n135# OUT 0.0665f
+
+C42 OUT a_1426_n135# 0.0663f
+
+C43 VDD a_1681_n135# 0.238f
+
+C44 VDD a_1936_n135# 0.236f
+
+C45 a_1298_n135# a_1426_n135# 0.107f
+
+C46 a_785_n135# OUT 0.0663f
+
+C47 a_1808_n135# a_1681_n135# 0.107f
+
+C48 OUT GND 1.92f
+
+C49 VDD GND 7.87f
+
+C50 a_1936_n135# GND 0.64f 
+
+C51 a_1808_n135# GND 0.615f 
+
+C52 a_1681_n135# GND 0.616f
+
+C53 a_1553_n135# GND 0.614f
+
+C54 a_1426_n135# GND 0.616f 
+
+C55 a_1298_n135# GND 0.615f 
+
+C56 a_1171_n135# GND 0.616f 
+
+C57 a_1040_n135# GND 0.614f 
+
+C58 a_912_n135# GND 0.615f
+
+C59 a_785_n135# GND 0.616f 
+
+C60 a_657_n135# GND 0.615f 
+
+C61 a_530_n135# GND 0.616f 
+
+C62 a_402_n135# GND 0.614f 
+
+C63 a_275_n135# GND 0.616f 
+
+C64 a_147_n135# GND 0.615f 
+
+C65 a_20_n135# GND 0.634f 
+
+//.ends
+
+.tran 1n 10000n
+
+.control
+
+run
+
+.endc
+
+.end
