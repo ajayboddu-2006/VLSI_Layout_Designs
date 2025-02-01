@@ -25,6 +25,7 @@ As part of this project, the repository includes:
 |   ├── 2X1 MUX
 |   ├── 4X1 MUX
 |   ├── 3:8 Decoder
+|   ├── D Flip Flop
 |   ├── <To be Added>
 ├── Analog Layouts
 │   ├── <To be added>
